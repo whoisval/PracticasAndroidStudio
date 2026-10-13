@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.practicasandroidstudio.ui.theme.PracticasAndroidStudioTheme
 import com.example.practicasandroidstudio.ui.theme.screens.Practica02Inicio
+import com.example.practicasandroidstudio.ui.theme.screens.Practica01Inicio
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,8 @@ class MainActivity : ComponentActivity() {
             PracticasAndroidStudioTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Practica02Inicio(modifier = Modifier.padding(innerPadding))
+                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
+                    Practica01Inicio(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -33,5 +36,6 @@ class MainActivity : ComponentActivity() {
 fun MainPreview() {
     PracticasAndroidStudioTheme {
         Practica02Inicio()
+        Practica01Inicio()
     }
 }
