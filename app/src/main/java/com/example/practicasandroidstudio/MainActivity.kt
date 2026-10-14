@@ -7,12 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.practicasandroidstudio.ui.theme.PracticasAndroidStudioTheme
 import com.example.practicasandroidstudio.ui.theme.screens.Practica04Inicio
+import com.example.practicasandroidstudio.ui.theme.screens.Practica03Inicio
+import com.example.practicasandroidstudio.ui.theme.screens.Practica02Inicio
+import com.example.practicasandroidstudio.ui.theme.screens.Practica01Inicio
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,10 @@ class MainActivity : ComponentActivity() {
             PracticasAndroidStudioTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Practica04Inicio(modifier = Modifier.padding(innerPadding))
+                    Practica03Inicio(modifier = Modifier.padding(innerPadding))
+                    Practica02Inicio(modifier = Modifier.padding(innerPadding))
+                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
+                    Practica01Inicio(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -33,5 +39,8 @@ class MainActivity : ComponentActivity() {
 fun MainPreview() {
     PracticasAndroidStudioTheme {
         Practica04Inicio()
+        Practica03Inicio()
+        Practica02Inicio()
+        Practica01Inicio()
     }
 }
