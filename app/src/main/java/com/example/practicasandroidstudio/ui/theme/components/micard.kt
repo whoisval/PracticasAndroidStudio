@@ -1,4 +1,4 @@
-package com.example.practicasandroidstudio.ui.theme.components
+package com.example.practicadelegate.ui.theme.Components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun micard(modifier: Modifier = Modifier, nombre: String) {
+
     Box(
         modifier = modifier
             .fillMaxWidth()
