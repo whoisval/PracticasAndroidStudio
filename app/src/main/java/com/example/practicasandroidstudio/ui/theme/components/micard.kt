@@ -1,3 +1,10 @@
+package com.example.practicasandroidstudio.ui.theme.components
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 package com.example.practicadelegate.ui.theme.Components
 
 import androidx.compose.foundation.background
@@ -17,6 +24,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
+fun micard(
+    modifier: Modifier = Modifier,
+    nombre: String,
+    eliminar: () -> Unit,
+    actualizar: () -> Unit
+) {
 fun micard(modifier: Modifier = Modifier, nombre: String) {
 
     Box(
@@ -30,6 +43,43 @@ fun micard(modifier: Modifier = Modifier, nombre: String) {
             )
             .background(
                 color = Color.White,
+                shape = RoundedCornerShape(12.dp)
+            )
+            .padding(10.dp)
+    ) {
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+            Text(
+                text = nombre,
+                modifier = Modifier.weight(1f)
+            )
+
+            Text(
+                text = "Actualizar",
+                modifier = Modifier
+                    .clickable {
+                        actualizar()
+                    }
+                    .padding(10.dp)
+            )
+
+            Text(
+                text = "Eliminar",
+                modifier = Modifier
+                    .clickable {
+                        eliminar()
+                    }
+                    .padding(10.dp)
+            )
+        }
+    }
+
+    Spacer(modifier = Modifier.padding(5.dp))
+}
                 shape = RoundedCornerShape(2.dp)
             ),
         contentAlignment = Alignment.Center
