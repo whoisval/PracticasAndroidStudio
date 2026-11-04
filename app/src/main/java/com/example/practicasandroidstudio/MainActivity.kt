@@ -1,3 +1,4 @@
+
 package com.example.practicasandroidstudio
 
 import android.os.Bundle
@@ -15,7 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+
 import com.example.practicasandroidstudio.ui.theme.PracticasAndroidStudioTheme
+import com.example.practicasandroidstudio.ui.theme.screens.Practica02LecturaInicio
 import com.example.practicasandroidstudio.ui.theme.screens.practica01.Practica01AforoInicio
 import com.example.practicasandroidstudio.ui.theme.screens.Practica08Inicio
 import com.example.practicasandroidstudio.ui.theme.screens.Practica06Inicio
@@ -47,6 +50,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
 
+                    Practica02LecturaInicio(
                     Practica07Inicio(
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -54,6 +58,16 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun MainPreview() {
+    PracticasAndroidStudioTheme {
+        Practica02LecturaInicio()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Practica06Inicio(modifier = Modifier.padding(innerPadding),)
                     Practica05Inicio(modifier = Modifier.padding(innerPadding))
