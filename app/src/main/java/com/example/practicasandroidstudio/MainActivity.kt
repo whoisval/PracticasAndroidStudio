@@ -18,6 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
 import com.example.practicasandroidstudio.ui.theme.PracticasAndroidStudioTheme
+import com.example.practicasandroidstudio.ui.theme.screens.Practica03TallerInicio
+import com.example.practicasandroidstudio.ui.theme.screens.Practica03TallerInicio
 import com.example.practicasandroidstudio.ui.theme.screens.Practica02LecturaInicio
 import com.example.practicasandroidstudio.ui.theme.screens.practica01.Practica01AforoInicio
 import com.example.practicasandroidstudio.ui.theme.screens.Practica08Inicio
@@ -50,6 +52,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
 
+                    Practica03TallerInicio(
                     Practica02LecturaInicio(
                     Practica07Inicio(
                         modifier = Modifier.padding(innerPadding)
@@ -66,6 +69,8 @@ class MainActivity : ComponentActivity() {
 )
 @Composable
 fun MainPreview() {
+    PracticasAndroidStudioTheme {
+        Practica03TallerInicio()
     PracticasAndroidStudioTheme {
         Practica02LecturaInicio()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
